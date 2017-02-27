@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="user" namespace="/user" extends="struts-default">
+		<action name="reg" class="com.bx.ssh2.user.action.UserAction" method="reg"></action>
+		<action name="login" class="com.bx.ssh2.user.action.UserAction" method="login"></action>
+		<action name="getUser" class="com.bx.ssh2.user.action.UserAction" method="getUser"></action>
+		<action name="del" class="com.bx.ssh2.user.action.UserAction" method="delete"></action>
+		<action name="change" class="com.bx.ssh2.user.action.UserAction" method="change"></action>
+	</package>
+</struts>
