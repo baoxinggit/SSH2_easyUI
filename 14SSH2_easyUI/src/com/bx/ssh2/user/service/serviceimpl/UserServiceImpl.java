@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.bx.ssh2.base.util.Encrypt;
 import com.bx.ssh2.user.dao.UserDao;
 import com.bx.ssh2.user.pageModal.UserModal;
-import com.bx.ssh2.user.pojo.User;
+import com.bx.ssh2.user.po.User;
 import com.bx.ssh2.user.service.UserService;
 
 @Service(value="userService")

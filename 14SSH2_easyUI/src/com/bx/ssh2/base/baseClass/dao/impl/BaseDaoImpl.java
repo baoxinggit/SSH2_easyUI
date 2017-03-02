@@ -12,7 +12,7 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import com.bx.ssh2.base.baseClass.dao.BaseDao;
 import com.bx.ssh2.menu.po.Menu;
-import com.bx.ssh2.user.pojo.User;
+import com.bx.ssh2.user.po.User;
 
 public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 

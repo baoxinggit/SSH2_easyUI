@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import com.bx.ssh2.base.baseClass.action.BaseAction;
 import com.bx.ssh2.base.util.JSON;
 import com.bx.ssh2.user.pageModal.UserModal;
-import com.bx.ssh2.user.pojo.User;
+import com.bx.ssh2.user.po.User;
 import com.bx.ssh2.user.service.UserService;
 import com.opensymphony.xwork2.ModelDriven;
 

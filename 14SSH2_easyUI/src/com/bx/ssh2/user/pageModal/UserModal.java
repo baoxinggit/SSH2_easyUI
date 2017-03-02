@@ -3,7 +3,7 @@ package com.bx.ssh2.user.pageModal;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bx.ssh2.user.pojo.User;
+import com.bx.ssh2.user.po.User;
 
 public class UserModal {
 	private List<User> rows = new ArrayList<>();

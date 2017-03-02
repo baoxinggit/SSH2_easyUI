@@ -1,7 +1,7 @@
 package com.bx.ssh2.user.service;
 
 import com.bx.ssh2.user.pageModal.UserModal;
-import com.bx.ssh2.user.pojo.User;
+import com.bx.ssh2.user.po.User;
 
 public interface UserService {
 	void regUser(User user);

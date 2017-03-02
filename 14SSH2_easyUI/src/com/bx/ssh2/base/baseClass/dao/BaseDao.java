@@ -2,7 +2,7 @@ package com.bx.ssh2.base.baseClass.dao;
 
 import java.util.List;
 
-import com.bx.ssh2.user.pojo.User;
+import com.bx.ssh2.user.po.User;
 
 
 public interface BaseDao<T>{
