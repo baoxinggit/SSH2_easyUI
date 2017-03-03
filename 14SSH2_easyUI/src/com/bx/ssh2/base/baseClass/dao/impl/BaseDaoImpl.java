@@ -1,8 +1,6 @@
 package com.bx.ssh2.base.baseClass.dao.impl;
 
-import java.io.Serializable;
 import java.util.List;
-import java.util.UUID;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -11,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import com.bx.ssh2.base.baseClass.dao.BaseDao;
-import com.bx.ssh2.menu.po.Menu;
 import com.bx.ssh2.user.po.User;
 
 public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {

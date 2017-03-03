@@ -21,7 +21,7 @@ public class UserModal {
 		return total;
 	}
 
-	public void setTotal(Long long1) {
-		this.total = long1;
+	public void setTotal(Long total) {
+		this.total = total;
 	}
 }
