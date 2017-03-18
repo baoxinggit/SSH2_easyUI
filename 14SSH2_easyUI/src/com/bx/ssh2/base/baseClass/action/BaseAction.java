@@ -14,6 +14,8 @@ import com.opensymphony.xwork2.ActionSupport;
  * 对json数据进行写出
  */
 public class BaseAction extends ActionSupport{
+	private static final long serialVersionUID = 1L;
+
 	public void writeJson(Object object) {
 		ServletActionContext.getResponse().setCharacterEncoding("utf-8");
 		ServletActionContext.getResponse().setContentType("text/html;charset=utf-8");

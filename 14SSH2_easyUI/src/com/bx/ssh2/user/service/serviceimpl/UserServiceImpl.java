@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bx.ssh2.base.util.Encrypt;
-import com.bx.ssh2.user.dao.RoleDao;
 import com.bx.ssh2.user.dao.UserDao;
 import com.bx.ssh2.user.pageModal.UserModal;
 import com.bx.ssh2.user.po.User;

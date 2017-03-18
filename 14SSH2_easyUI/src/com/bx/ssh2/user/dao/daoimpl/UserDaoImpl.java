@@ -1,8 +1,5 @@
 package com.bx.ssh2.user.dao.daoimpl;
 
-import java.util.List;
-
-import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
 import com.bx.ssh2.base.baseClass.dao.impl.BaseDaoImpl;
