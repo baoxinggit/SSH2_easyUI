@@ -5,14 +5,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="userTable")
-public class User {
+public class User implements Cloneable{
 	private String id;
 	private String name;
 	private Date createTime;
@@ -61,12 +60,16 @@ public class User {
 		this.password = password;
 	}
 
-	@ManyToMany(fetch=FetchType.EAGER)
+	@ManyToMany(mappedBy="user")
 	public Set<Role> getRole() {
 		return role;
 	}
 
 	public void setRole(Set<Role> role) {
 		this.role = role;
+	}
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 }

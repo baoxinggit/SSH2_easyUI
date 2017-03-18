@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="module" namespace="/module" extends="struts-default">
+		<action name="getModule" class="com.bx.ssh2.user.action.ModuleAction" method="getModule"></action>
+		<action name="addModule" class="com.bx.ssh2.user.action.ModuleAction" method="addModule"></action>
+		<action name="deleteModule" class="com.bx.ssh2.user.action.ModuleAction" method="deleteModule"></action>
+		<action name="changeModule" class="com.bx.ssh2.user.action.ModuleAction" method="changeModule"></action>
+	</package>
+</struts>

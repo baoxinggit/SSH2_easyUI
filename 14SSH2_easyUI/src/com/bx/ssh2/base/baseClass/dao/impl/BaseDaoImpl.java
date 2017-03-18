@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import com.bx.ssh2.base.baseClass.dao.BaseDao;
-import com.bx.ssh2.user.po.User;
 
 public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 
@@ -23,6 +22,7 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 		this.getHibernateTemplate().save(o);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public boolean login(String hql, String... param) {
 		List<T> find = (List<T>) this.getHibernateTemplate().find(hql, param);
@@ -34,14 +34,14 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 		return (List<T>) this.getHibernateTemplate().find(hql, param);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<T> paging(String hql, Integer... param) {
 		Session session = this.getSessionFactory().getCurrentSession();
 		Query query = session.createQuery(hql)
 				.setFirstResult(param[0] * (param[1] - 1))
 				.setMaxResults(param[0]);
-		return query.list();
+		List<T> t = query.list();
+		return t;
 	}
 
 	@Override
@@ -50,23 +50,32 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 	}
 
 	@Override
-	public boolean delete(String[] idStr) {
-		for(String id : idStr){
-			User user = this.getHibernateTemplate().get(User.class, id);
-			if(user != null)
-				this.getHibernateTemplate().delete(user);
-		}
+	public boolean delete(Object idStr){
+		this.getHibernateTemplate().delete(idStr);
 		return true;
 	}
 
 	@Override
-	public void update(User user) {
-		this.getHibernateTemplate().update(user);
+	public void update(T t) {
+		this.getHibernateTemplate().update(t);
 	}
 
 	@Override
 	public T findById(T t,String id) {
+		@SuppressWarnings("unchecked")
 		T tt = (T) this.getHibernateTemplate().get(t.getClass() , id);
 		return tt;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<T> find(String hql) {
+		return (List<T>) this.getHibernateTemplate().find(hql);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<T> findObjectById(String hql, Integer... value) {
+		return (List<T>) this.getHibernateTemplate().find(hql, value);
 	}
 }

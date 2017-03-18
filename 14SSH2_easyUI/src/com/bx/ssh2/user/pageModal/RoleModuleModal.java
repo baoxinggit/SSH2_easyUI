@@ -1,22 +1,24 @@
 package com.bx.ssh2.user.pageModal;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import com.bx.ssh2.user.po.RoleModule;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RoleModuleModal {
-	private Set<RoleModule> roleModule = new HashSet<>();
+	private List<RoleModule> rows = new ArrayList<>();
 	private int total;
-	public Set<RoleModule> getRoleModule() {
-		return roleModule;
+
+	public List<RoleModule> getRows() {
+		return rows;
 	}
-	public void setRoleModule(Set<RoleModule> roleModule) {
-		this.roleModule = roleModule;
+
+	public void setRows(List<RoleModule> rows) {
+		this.rows = rows;
 	}
+
 	public int getTotal() {
 		return total;
 	}
+
 	public void setTotal(int total) {
 		this.total = total;
 	}

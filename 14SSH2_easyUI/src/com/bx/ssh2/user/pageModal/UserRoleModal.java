@@ -5,16 +5,16 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.bx.ssh2.user.po.Module;
+import com.bx.ssh2.user.po.User;
 
 @Component
-public class ModuleModal {
-	private List<Module> rows = new ArrayList<>();
+public class UserRoleModal {
+	private List<User> rows = new ArrayList<>();
 	private Long total;
-	public List<Module> getRows() {
+	public List<User> getRows() {
 		return rows;
 	}
-	public void setRows(List<Module> rows) {
+	public void setRows(List<User> rows) {
 		this.rows = rows;
 	}
 	public Long getTotal() {

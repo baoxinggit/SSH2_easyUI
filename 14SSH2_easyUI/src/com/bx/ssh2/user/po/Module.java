@@ -8,11 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 
 @Entity
 public class Module {
 	private int id;
 	private String name;
+	private int code;
 	private Set<RoleModule> roleModule = new HashSet<>();
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -35,4 +37,12 @@ public class Module {
 	public void setRoleModule(Set<RoleModule> roleModule) {
 		this.roleModule = roleModule;
 	}
+	@Transient
+	public int getCode() {
+		return code;
+	}
+	public void setCode(int code) {
+		this.code = code;
+	}
+	
 }

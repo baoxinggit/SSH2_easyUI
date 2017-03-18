@@ -36,11 +36,13 @@
 				5. PROPAGATION_NOT_SUPPORTED: 总是非事务地执行，并挂起任何存在的事务。 6. PROPAGATION_NEVER: 
 				总是非事务地执行，如果存在一个活动事务，则抛出异常 7. PROPAGATION_NESTED：如果一个活动的事务存在，则运行在一个嵌套的事务中. 
 				如果没有活动事务, 则按TransactionDefinition.PROPAGATION_REQUIRED 属性执行 -->
-			<tx:method name="add" propagation="REQUIRED" />
-			<tx:method name="save" propagation="REQUIRED" />
-			<tx:method name="update" propagation="REQUIRED" />
-			<tx:method name="*" propagation="REQUIRED" />
-			<tx:method name="get*" read-only="true" />
+			<tx:method name="get*" read-only="true"/>
+			<tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+			<tx:method name="load*" propagation="REQUIRED" read-only="true"/>
+			<tx:method name="save*" propagation="REQUIRED"/>
+			<tx:method name="add*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="remove*" propagation="REQUIRED"/>
 		</tx:attributes>
 	</tx:advice>
 	<!-- 配置aop注解方式 -->

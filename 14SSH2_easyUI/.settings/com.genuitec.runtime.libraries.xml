@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+  <container path="com.genuitec.runtime.library/com.genuitec.generic_7.0">
+    <jar-attrs id="data/libraryset/EE_7//javaee-api-7.0.jar">
+      <attribute name="javadoc_location" value="http://docs.oracle.com/javaee/7/api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="F:\software\myEclipse\plugins\com.genuitec.eclipse.j2eedt.core_11.5.0.me201311281640\data\libraryset\EE_7\javaee-api-7.0.jar"/>
+    </jar-attrs>
+  </container>
+</project>

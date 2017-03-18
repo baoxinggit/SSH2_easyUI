@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import com.bx.ssh2.base.baseClass.action.BaseAction;
-import com.bx.ssh2.base.util.JSON;
 import com.bx.ssh2.menu.pageModal.MenuModal;
 import com.bx.ssh2.menu.po.Menu;
 import com.bx.ssh2.menu.service.MenuService;
@@ -16,6 +15,7 @@ import com.opensymphony.xwork2.ModelDriven;
 @Controller
 @Scope("prototype")
 public class MenuAction extends BaseAction implements ModelDriven<Menu>{
+	private static final long serialVersionUID = 1L;
 	private Menu menu = new Menu();
 	@Autowired
 	private MenuService menuService;

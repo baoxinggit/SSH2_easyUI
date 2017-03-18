@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="role" namespace="/role" extends="struts-default">
+		<action name="getRole" class="com.bx.ssh2.user.action.RoleAction" method="getRole"></action>
+		<action name="addRole" class="com.bx.ssh2.user.action.RoleAction" method="addRole"></action>
+		<action name="deleteRole" class="com.bx.ssh2.user.action.RoleAction" method="deleteRole"></action>
+		<action name="changeRole" class="com.bx.ssh2.user.action.RoleAction" method="changeRole"></action>
+	</package>
+</struts>

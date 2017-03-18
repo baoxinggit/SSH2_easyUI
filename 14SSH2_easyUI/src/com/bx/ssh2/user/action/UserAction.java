@@ -1,7 +1,6 @@
 package com.bx.ssh2.user.action;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

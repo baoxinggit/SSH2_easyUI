@@ -34,6 +34,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body class="easyui-layout">
+  	<jsp:include page="grant/roleModule.jsp"></jsp:include>
     <div data-options="region:'north',title:'North Title',split:true" style="height:100px;"></div>
     <div data-options="region:'south',title:'South Title',split:true" style="height:100px;"></div>
     <div data-options="region:'east',title:'East',split:true" style="width:200px;"></div>

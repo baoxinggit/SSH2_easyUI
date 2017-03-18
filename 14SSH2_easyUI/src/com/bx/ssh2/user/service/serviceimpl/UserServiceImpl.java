@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bx.ssh2.base.util.Encrypt;
+import com.bx.ssh2.user.dao.RoleDao;
 import com.bx.ssh2.user.dao.UserDao;
 import com.bx.ssh2.user.pageModal.UserModal;
 import com.bx.ssh2.user.po.User;
@@ -40,6 +41,9 @@ public class UserServiceImpl implements UserService{
 			hql = hql + " where name like '%" + searchId + "%'";
 		}
 		List<User> list = userDao.paging(hql , Integer.valueOf(rows), Integer.valueOf(page));
+		for(User user : list){
+			user.setRole(null);
+		}
 		UserModal um = new UserModal();
 		um.setRows(list);
 		hql = "select count(id) from User";
@@ -49,7 +53,11 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public boolean delete(String ids) {
 		String[] idStr = ids.split(",");
-		return userDao.delete(idStr);
+		for (String string : idStr) {
+			List<User> users = userDao.find("from User where id = ?", string);
+			return userDao.delete(users.get(0));
+		}
+		return true;
 	}
 	@Override
 	public void change(User user) {
